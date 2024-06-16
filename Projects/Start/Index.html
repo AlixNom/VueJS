@@ -8,7 +8,19 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing</p>
+    <div id="content" class= "container">
+        <h1>{{ pageTitle }}</h1>
+        <p>{{ pageContent}}</p>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return{
+                    pageTitle: 'Title',
+                    pageContent: 'Content Content Content Content Content Content Content Content Content Content'
+                };
+            }
+        }).mount('#content');
+    </script>
 </body>
 </html>
